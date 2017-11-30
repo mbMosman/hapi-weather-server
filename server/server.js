@@ -3,7 +3,7 @@
 const Weather = require('../modules/weather');
 
 const Hapi = require('hapi');
-const server = new Hapi.Server({ host: 'localhost', port: 3000});
+const server = new Hapi.Server({ host: 'mighty-brushlands-35956.herokuapp.com/', port: 8080});
 
 server.start()
   .then( () => { console.log(`Listening on ${server.info.uri}`)} )
