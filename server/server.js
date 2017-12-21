@@ -3,7 +3,8 @@
 const Weather = require('../modules/weather');
 
 const Hapi = require('hapi');
-const server = new Hapi.Server({ host: 'localhost', port: 3000});
+const myPort = process.env.PORT || 5000
+const server = new Hapi.Server({ host: 'localhost', port: myPort});
 
 server.start()
   .then( () => { console.log(`Listening on ${server.info.uri}`)} )
